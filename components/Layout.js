@@ -1,8 +1,11 @@
+import { Store } from '@/utils/Store'
 import Head from 'next/head'
 import Link from 'next/link'
-import React from 'react'
+import React, { useContext } from 'react'
 
 const Layout = ( {children, title}) => {
+    const {state, dispatch}= useContext(Store)
+    const {cart}= state;
   return (
    <>
    <Head>
@@ -20,7 +23,13 @@ const Layout = ( {children, title}) => {
             <Link href="/" className="text-lg font-bold">Shopping</Link>
             <div>
 
-            <Link href="/" className="p-2">Cart</Link>
+            <Link href="/" className="p-2">
+                
+                {cart.cartItems.length>0 &&(
+                    <span className='ml-1 rounded-full bg-red-500 px-2 py-1 text-xs font-bold text-white'>
+                        {cart.cartItems.reduce((a,c)=>a+c.quantity,0)}
+                    </span>
+                )}Cart</Link>
             <Link href="/" className="p-2">Login</Link>
             </div>
             </nav>
