@@ -8,6 +8,8 @@ const LoginScreen = () => {
 
     const submitHandler=( {email, password} )=>{
 
+        console.log(email, password);
+
     }
   return (
     <Layout title='Login'>
