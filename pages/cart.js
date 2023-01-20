@@ -5,6 +5,8 @@ import {AiFillCloseCircle} from 'react-icons/ai'
 import Layout from '../components/Layout';
 import { Store } from '../utils/Store';
 import { useRouter } from 'next/router';
+import dynamic from 'next/dynamic';
+
 
 // import { toast } from 'react-toastify';
 
@@ -108,4 +110,4 @@ function CartScreen() {
   );
 }
 
-export default CartScreen;
+export default dynamic(()=>Promise.resolve(CartScreen), {ssr:false});
