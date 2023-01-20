@@ -23,14 +23,15 @@ const Layout = ( {children, title}) => {
             <Link href="/" className="text-lg font-bold">Shopping</Link>
             <div>
 
-            <Link href="/" className="p-2">
+            <Link href="/cart" className="p-2">
                 
                 {cart.cartItems.length>0 &&(
                     <span className='ml-1 rounded-full bg-red-500 px-2 py-1 text-xs font-bold text-white'>
                         {cart.cartItems.reduce((a,c)=>a+c.quantity,0)}
                     </span>
                 )}Cart</Link>
-            <Link href="/" className="p-2">Login</Link>
+
+            <Link href="/login" className="p-2">Login</Link>
             </div>
             </nav>
        

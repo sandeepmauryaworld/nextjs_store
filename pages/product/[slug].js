@@ -7,6 +7,8 @@ import { useRouter } from 'next/router'
 import React, { useContext } from 'react'
 
 const ProductScreen = () => {
+
+    const router = useRouter()
     const {state, dispatch}= useContext(Store)
 
     const {query}= useRouter();
@@ -27,6 +29,7 @@ const ProductScreen = () => {
         }
 
         dispatch({type:'CART_ADD_ITEM', payload:{...product, quantity}})
+        // router.push('/cart')
 
     }
   return (
