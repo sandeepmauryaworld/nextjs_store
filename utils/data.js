@@ -94,6 +94,7 @@ const data = {
       numReviews: 14,
       countInStock: 20,
       description: 'A popular pants',
+      
     },
   ],
 };
