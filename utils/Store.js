@@ -42,6 +42,7 @@ function reducer(state, action) {
           paymentMethod: '',
         },
       };
+      
       case 'SAVE_SHIPPING_ADDRESS':
         return {
           ...state,
