@@ -50,7 +50,7 @@ const submitHandler=({fullName, city, address, postalCode, country} )=>{
 
 }
   return (
-    <Layout title="Shipping Address">
+    <Layout title="Shipping Address. ">
 
         <CheckOutWizard activeStep={1}/>
 
@@ -129,7 +129,7 @@ const submitHandler=({fullName, city, address, postalCode, country} )=>{
             </div>
 
             <div className='mb-4 flex justify-between'>
-                <button className='primary-button'>Next</button>
+                <button className='primary-button'>Next  </button>
             </div>
         </form>
     </Layout>
