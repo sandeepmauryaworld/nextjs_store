@@ -1,12 +1,12 @@
 import Layout from '@/components/Layout'
 import Product from '@/models/Product';
-import data from '@/utils/data';
+
 import db from '@/utils/db';
 import { Store } from '@/utils/Store';
 import axios from 'axios';
 import Image from 'next/image';
 import Link from 'next/link';
-import { router, useRouter } from 'next/router';
+import { router } from 'next/router';
 // import { useRouter } from 'next/router'
 import React, { useContext } from 'react'
 import { toast } from 'react-toastify';
