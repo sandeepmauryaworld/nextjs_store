@@ -218,7 +218,7 @@ function OrderScreen() {
                     <tr key={item._id} className="border-b">
                       <td>
                         <Link href={`/product/${item.slug}`}>
-                          <a className="flex items-center">
+                          <p className="flex items-center">
                             <Image
                               src={item.image}
                               alt={item.name}
@@ -227,7 +227,7 @@ function OrderScreen() {
                             ></Image>
                             &nbsp;
                             {item.name}
-                          </a>
+                          </p>
                         </Link>
                       </td>
                       <td className=" p-5 text-right">{item.quantity}</td>
